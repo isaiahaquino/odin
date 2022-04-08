@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <header>
+        <header class="container">
             <h1>Header Logo</h1>
             <ul class="links">
                 <li><a href="">header link one</a></li>
@@ -17,21 +17,19 @@
             </ul>
         </header>
 
-        <div class="hero">
-            <div class="left">
+        <div class="container" id="hero">
+            <div id="left">
                 <h2>This website is awesome</h2>
                 <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast</p>
                 <button class="signup">Sign up</button>
             </div>
-            <div class="right">
+            <div id="right">
                 <h3>this is a placeholder for an image</h3>
             </div>
         </div>
 
-        <div class="info">
-            <div class="title">
-                <h2>Some random information.</h2>
-            </div>
+        <div class="container" id="info">
+            <h2>Some random information.</h2>
             <div class="content">
                 <div class="infoslot">
                     <div class="image"></div>
@@ -52,16 +50,22 @@
             </div>
         </div>
 
-        <div class="quote">
+        <div class="container" id="quote">
             <blockquote>This is an aspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</blockquote>
             <h3>-Thor, God of Thunder</h3>
         </div>
 
-        <div class="cta">
-
+        <div class="container" id="cta">
+            <div id="box">
+                <div>
+                    <h3>Call to action! It's time!</h3>
+                    <p>Sign up for out product by clicking that button right over there!</p>
+                </div>
+                <button class="signup">Sign up</button>
+            </div>
         </div>
 
-        <footer>
+        <footer class="container">
             Copyright © The Odin Project 2021
         </footer>
     </body>
