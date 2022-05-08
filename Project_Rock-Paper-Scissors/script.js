@@ -37,8 +37,9 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     let playerScore = 0;
     let computerScore = 0;
+    
 
-    for (let i = 0; i < 5; i++) {
+    for (let i=0; i < 5; i++) {
         console.log("--ROUND " + (i + 1) + "--");
         let player = prompt("Rock, Paper, or Scissors?");
         let computer = computerPlay();
@@ -64,4 +65,13 @@ function game() {
     } else { console.log("It's a Tie!"); }
 }
 
-game();
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        let computer = computerPlay();
+        let player = button.textContent;
+        let result = playRound(player, computer);
+        console.log(player);
+        console.log(result);
+    });
+});
