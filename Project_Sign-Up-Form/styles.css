@@ -18,25 +18,26 @@ img#background {
 }
 
 #logo {
-    height: 150px;
+    height: 125px;
     width: 40vw;
     background-color: rgba(0,0,0,.5);
     position: absolute;
-    top: 200px;
+    top: 30vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
     color: white;
     text-align: center;
-    margin: 50px 0 0 0;
     font-size: 50px;
 }
 
 #logo img {
     height: 75px;
     width: 75px;
-    margin: 25px 10px 0 5vw;
+    margin: -20px 20px 0 0;
 }
 
 #caption {
@@ -44,8 +45,9 @@ h1 {
     margin: 0;
     text-align: center;
     width: 40vw;
-    top: 97vh;
+    top: 98vh;
     color: white;
+    font-size: 10px;
 }
 
 #caption a {
@@ -67,12 +69,18 @@ h1 {
 }
 
 #info {
-    height: 30vh;
+    height: 32vh;
+}
+
+#info p {
+    margin: 75px 0 0 30px;
+    font-size: 20px;
+    width: 575px;
 }
 
 #form {
     background-color: white;
-    height: 40vh;
+    height: 36vh;
     box-shadow: 0 5px 10px -3px lightgrey;
 }
 
@@ -83,16 +91,44 @@ h1 {
 #form form {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 20px;
+    margin-left: 30px;
+    width: 600px;
 }
 
 .form_section label {
-    font-size: 7px;
+    font-size: 10px;
+}
+
+input {
+    width: 200px;
+}
+
+.form_section input:focus {
+    box-shadow: 3px 3px 5px 0px lightgray;
 }
 
 .form_section {
     display: flex;
     flex-direction: column;
-    margin: 10px 10px;
+    margin: 10px 50px 10px 0px;
+}
+
+#submit_button {
+    position: absolute;
+    top: 71vh;
+    padding: .75rem 2.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #593307;
+    color: white;
+    box-shadow: 3px 3px 10px 0px lightgray;
+}
+
+#create p {
+    margin: 75px 0 0 30px;
+}
+
+#create p a {
+    color: #593307;
 }
 

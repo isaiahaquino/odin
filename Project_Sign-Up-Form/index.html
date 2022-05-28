@@ -23,18 +23,18 @@
         </div>
         <div id="form" class="right">
             <h2>Lets do this!</h2>
-            <form>
+            <form action="" method="get">
                 <div class="form_section">
                     <label for="first_name">FIRST NAME</label>
-                    <input type="text" id="first_name" name=""> 
+                    <input type="text" id="first_name" name="first" required> 
                 </div>
                 <div class="form_section">
                     <label for="last_name">LAST NAME</label>
-                    <input type="text" id="last_name" name=""> 
+                    <input type="text" id="last_name" name="last"required> 
                 </div>
                 <div class="form_section">
                     <label for="user_email">EMAIL</label>
-                    <input type="email" id="user_email" name="email"> 
+                    <input type="email" id="user_email" name="email" required> 
                 </div>
                 <div class="form_section">
                     <label for="user_phone">PHONE NUMBER</label>
@@ -42,11 +42,11 @@
                 </div>
                 <div class="form_section">
                     <label for="user_password">PASSWORD</label>
-                    <input type="password" id="user_password" name="password">
+                    <input type="password" id="user_password" name="password" required>
                 </div>
                 <div class="form_section">
                     <label for="confirm_password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm_password" name="confirm_password">
+                    <input type="password" id="confirm_password" name="confirm_password" required>
                 </div>
                 <button id="submit_button" type="submit">Create Account</button>
             </form>
