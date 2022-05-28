@@ -1,0 +1,11 @@
+main {
+    background-color: aquamarine;
+}
+
+main > div {
+    background-color: beige;
+}
+
+main > div > div {
+    background-color: green;
+}

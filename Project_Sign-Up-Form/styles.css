@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    display: flex;
+}
+
+/* LEFT STYLES */
+
+#left {
+    width: 40vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+img#background {
+    height: 100vh;
+    width: 40vw;
+}
+
+#logo {
+    height: 150px;
+    width: 40vw;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    top: 200px;
+    display: flex;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin: 50px 0 0 0;
+    font-size: 50px;
+}
+
+#logo img {
+    height: 75px;
+    width: 75px;
+    margin: 25px 10px 0 5vw;
+}
+
+#caption {
+    position: absolute;
+    margin: 0;
+    text-align: center;
+    width: 40vw;
+    top: 97vh;
+    color: white;
+}
+
+#caption a {
+    color: white;
+}
+
+/* RIGHT STYLES */
+
+#right {
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    width: 60vw;
+    background-color: whitesmoke;
+}
+
+#info {
+    height: 30vh;
+}
+
+#form {
+    background-color: white;
+    height: 40vh;
+    box-shadow: 0 5px 10px -3px lightgrey;
+}
+
+#form h2 {
+    margin-left: 30px;
+}
+
+#form form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+.form_section label {
+    font-size: 7px;
+}
+
+.form_section {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+}
+
