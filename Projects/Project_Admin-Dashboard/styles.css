@@ -5,25 +5,196 @@
 
 .container {
     display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: 200px 2fr;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 140px 2fr;
 }
+
+/* HEADER STYLES */
 
 .header {
     background-color: white;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    display: grid;
+    grid: "search account" 50px
+          "greeting   nav" 50px
+          /2fr 1fr;
+    margin: 5px 50px;
+    gap: 15px 0;
 }
 
+.header * {
+    /*border: 1px solid black;*/
+}
+
+.header #search {
+    grid-area: search;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_icons {
+    height: 1.25em;
+    width: 1.25em;
+}
+
+.header #search form input {
+    background-color: rgb(233, 233, 233);
+    border-radius: 50px;
+    height: 2em;
+    width: 450px;
+    border: none;
+}
+
+.header #account {
+    grid-area: account;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+}   
+
+.header #account .user_icon {
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.header #account p {
+    font-size: 1.25em;
+}
+
+.header #greeting {
+    grid-area: greeting;
+    display: flex;
+    gap: 15px;
+}
+
+#greeting_username {
+    font-size: 1.5em;
+}
+
+.header #nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 30px;
+}
+
+#nav button {
+    background-color: #0079bf;
+    color: white;
+    padding: 9px 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* SIDEBAR STYLES */
+
 .sidebar {
-    background-color: #24c5ed;
+    background-color: #0079bf;
     grid-row: 1 / 3;
     grid-column: 1 / 2;
+    display: grid;
+    grid-template-rows: 75px 260px 150px;
+    gap: 10px;
 }
+
+.sidebar * {
+    /*border: 1px solid black;*/
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+#title img {
+    height: 2.5em;
+    width: 2.5rem;
+}
+
+#title h1 {
+    color: white;
+}
+
+.sidebar a {
+    color: white;
+    font-size: 1.25em;
+}
+
+.sidebar #account_nav {
+    display: grid;
+    grid-template-columns: 25px 125px;
+    grid-template-rows: repeat(6, 25px);
+    align-items: center;
+    gap: 15px 20px;
+    margin: 15px 20px;
+}
+
+.sidebar #settings {
+    display: grid;
+    grid-template-columns: 25px 125px;
+    grid-template-rows: repeat(3, 25px);
+    align-items: center;
+    gap: 15px 20px;
+    margin: 15px 20px;
+}
+
+#account_nav img, #settings img {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+/* MAIN STYLES */
 
 .main {
     background-color: whitesmoke;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     height: 1000px;
+    box-shadow: inset -1px 5px 10px -5px grey;
+    display: grid;
+    grid: "projects announcements" 1fr
+          "projects     trending" 1fr
+          / 3fr 1fr;
+    padding: 30px 15px;
+    gap: 15px;
+}
+
+.main * {
+    border: 1px solid black;
+}
+
+.main h2 {
+    font-size: 17px;
+    font-weight: 600;
+    padding: 3px;
+}
+
+#projects {
+    grid-area: projects;
+}
+
+#announcements {
+    grid-area: announcements;
+}
+
+#announcements .announcement {
+    background-color: white;
+    border: 5px;
+    height: fill;
+}
+
+#trending {
+    grid-area: trending;
+}
+
+#trending .trending {
+    background-color: white;
+    border: 5px;
 }
