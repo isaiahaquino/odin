@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@1,200&family=Roboto&display=swap');
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Library</h1>
+        </div>
+    
+        <div class="main">
+            <button type="button" class="add" onclick="openForm()">+ Add Book</button>
+            <div class="form" id="bookForm">
+                <form action="" class="form-container" method="post">
+                    <h1>Add new book</h1>
+                    <input  class="inputBox" type="text" placeholder="Title" required>
+                    <input class="inputBox" type="text" placeholder="Author" required>
+                    <input class="inputBox" type="number" placeholder="Pages" required>
+                    <div>
+                        <label for="read">Have you read it?</label>
+                        <input type="checkbox" id="read">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn submit">Submit</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            <div class="books">
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <h2>Made by Isaiah Aquino</h2>
+        </div>
+    </div>
+</body>
+</html>
