@@ -22,21 +22,22 @@
             <div class="form" id="bookForm">
                 <form action="" class="form-container" method="post">
                     <h1>Add new book</h1>
-                    <input  class="inputBox" type="text" placeholder="Title" required>
-                    <input class="inputBox" type="text" placeholder="Author" required>
-                    <input class="inputBox" type="number" placeholder="Pages" required>
+                    <input id="inputTitle" type="text" placeholder="Title" required>
+                    <input id="inputAuthor" type="text" placeholder="Author" required>
+                    <input id="inputPages" type="number" placeholder="Pages" required>
                     <div>
                         <label for="read">Have you read it?</label>
-                        <input type="checkbox" id="read">
+                        <input type="hidden">
+                        <input type="checkbox" id="inputRead">
                     </div>
                     <div>
-                        <button type="submit" class="btn submit">Submit</button>
+                        <button type="submit" class="btn submit" id="submitBtn">Submit</button>
                         <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
                     </div>
                 </form>
             </div>
-            <div class="books">
-
+            <div class="books" id="bookContainer">
+                
             </div>
         </div>
 
