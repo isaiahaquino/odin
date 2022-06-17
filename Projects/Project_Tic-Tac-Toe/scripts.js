@@ -1,17 +1,23 @@
 const GameBoard = (() => {
     let boardArray = [0, 0, 0, 0, 0, 0, 0, 0, 0]; // 0 = null, 1 = X, 2 = O
     let currentMarker = 0;
+    let playerX = null;
+    let playerO = null;
+    let playerMoves = 0;
+    let winner = false;
 
     const getBoard = () => boardArray;
-    const getCurrentMarker = () => currentMarker;
     const changeMarker = (player) => currentMarker = player;
 
     const reset = () => { 
         boardArray = [0, 0, 0, 0, 0, 0, 0, 0, 0]; 
+        playerX = Player();
+        playerO = Player();
+        playerMoves = 0;
+        winner = false;
+        currentMarker = 0;
+        DisplayController.resetBoard();
         DisplayController.displayBoard();
-        
-        // TODO: Create X and O Player objects
-
         console.log("Board has reset.");
     }
 
@@ -21,13 +27,58 @@ const GameBoard = (() => {
                 console.log("Pick a player!");
                 return;
             }
-            boardArray[index] = currentMarker;
-            toggleMarker();
-            DisplayController.displayBoard();
+            if (winner) {
+                console.log("Reset board to play again!");
+                return;
+            }
 
-            // TODO: Call Player.makeMove(row, column)
+            boardArray[index] = currentMarker;
+            playerMoves += 1;
+
+            switch (index) {
+                case 0:
+                    if (currentMarker == 1) { playerX.makeMove(0,0); }
+                    else { playerO.makeMove(0,0); }
+                    break;
+                case 1:
+                    if (currentMarker == 1) { playerX.makeMove(0,1); }
+                    else { playerO.makeMove(0,1); }
+                    break;
+                case 2:
+                    if (currentMarker == 1) { playerX.makeMove(0,2); }
+                    else { playerO.makeMove(0,2); }
+                    break;
+                case 3:
+                    if (currentMarker == 1) { playerX.makeMove(1,0); }
+                    else { playerO.makeMove(1,0); }
+                    break;
+                case 4:
+                    if (currentMarker == 1) { playerX.makeMove(1,1); }
+                    else { playerO.makeMove(1,1); }
+                    break;
+                case 5:
+                    if (currentMarker == 1) { playerX.makeMove(1,2); }
+                    else { playerO.makeMove(1,2); }
+                    break;
+                case 6:
+                    if (currentMarker == 1) { playerX.makeMove(2,0); }
+                    else { playerO.makeMove(2,0); }
+                    break;
+                case 7:
+                    if (currentMarker == 1) { playerX.makeMove(2,1); }
+                    else { playerO.makeMove(2,1); }
+                    break;
+                case 8:
+                    if (currentMarker == 1) { playerX.makeMove(2,2); }
+                    else { playerO.makeMove(2,2); }
+            }
 
         } else { console.log("Position is currently occupied!"); }
+
+        checkWinner();
+        checkDraw();
+        toggleMarker();
+        DisplayController.displayBoard();
     }
 
     const toggleMarker = () => {
@@ -35,10 +86,35 @@ const GameBoard = (() => {
         else { DisplayController.togglePlayer(1); }
     }
 
-    return {getBoard, reset, changeMarker, getCurrentMarker, placeMark};
+    const checkWinner = () => {
+        if (playerO.getWinCheck()) {
+            console.log("Player O wins!");
+            winner = true;
+            DisplayController.popupWinner(2);
+        } else if (playerX.getWinCheck()) {
+            console.log("Player X wins!");
+            winner = true;
+            DisplayController.popupWinner(1);
+        }
+    }
+
+    const checkDraw = () => {
+        if (playerMoves == 9 && !playerX.getWinCheck() && !playerO.getWinCheck()) {
+            console.log("Draw!");
+            DisplayController.popupWinner(0);
+        }
+    }
+
+    return {getBoard, reset, changeMarker, placeMark};
 })();
 
 const DisplayController = (() => {
+
+    const xBtn = document.getElementById("playerX");
+    const oBtn = document.getElementById("playerO");
+    const xPop = document.getElementById("playerXWin");
+    const oPop = document.getElementById("playerOWin");
+    const drawPop = document.getElementById("draw");
 
     const displayBoard = () => {
         let array = GameBoard.getBoard();
@@ -57,25 +133,50 @@ const DisplayController = (() => {
 
     const togglePlayer = (player) => {
         if (player == 1) {
-            document.getElementById("playerO").classList.remove("selected");
-            document.getElementById("playerX").classList.add("selected");
+            oBtn.classList.remove("selected");
+            xBtn.classList.add("selected");
             GameBoard.changeMarker(1);
         } else if (player == 2) {
-            document.getElementById("playerX").classList.remove("selected");
-            document.getElementById("playerO").classList.add("selected");
+            xBtn.classList.remove("selected");
+            oBtn.classList.add("selected");
             GameBoard.changeMarker(2);
         }
     }
 
-    return {displayBoard, togglePlayer};
+    const popupWinner = (winner) => {
+        // winner: 1=X; 2=O; 0=draw;
+        switch (winner) {
+            case 0:
+                drawPop.style.display = "block";
+                break;
+            case 1:
+                xPop.style.display = "block";
+                break;
+            case 2:
+                oPop.style.display = "block";
+        }
+    }
+
+    const resetBoard = () => {
+        drawPop.style.display = "none";        
+        xPop.style.display = "none";
+        oPop.style.display = "none";
+        oBtn.classList.remove("selected");
+        xBtn.classList.remove("selected");
+    }
+
+    return {displayBoard, togglePlayer, popupWinner, resetBoard};
 })();
 
 const Player = (() => {
 
+    let winCheck = false;
     let rowsContainer = [0, 0, 0];
     let columnsContainer = [0, 0, 0];
     let diagonalContainer = [0, 0, 0];
     let oppositeDiagonalContainer = [0, 0, 0];
+
+    const getWinCheck = () => winCheck;
 
     const makeMove = (row, column) => {
         let sizeOfBoard = 3;
@@ -91,11 +192,11 @@ const Player = (() => {
         }
         
         if (rowsContainer[row] == sizeOfBoard) {
-            console.log("Win across row!");
+            winCheck = true;
         }
         
         if (columnsContainer[column] == sizeOfBoard) {
-            console.log("Win across column!");
+            winCheck = true;
         }
         
         var sumForRegularDiagonalElements = 0;
@@ -107,15 +208,17 @@ const Player = (() => {
         }
         
         if (sumForRegularDiagonalElements == sizeOfBoard) {
-            console.log("Win across diagonal!");
+            winCheck = true;
         }
         
         if (sumForOppositeDiagonalElements == sizeOfBoard) {
-            console.log("Win across diagonal!");
+            winCheck = true;
         }
     }
+
+    return {makeMove, getWinCheck}
 });
 
-DisplayController.reset();
+GameBoard.reset();
 
 

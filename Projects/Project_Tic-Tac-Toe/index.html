@@ -18,6 +18,10 @@
         </div>
     
         <div class="game">
+            <div class="popup" id="playerXWin">Player X Wins!</div>
+            <div class="popup" id="playerOWin">Player O Wins!</div>
+            <div class="popup" id="draw">Draw!</div>
+
             <div class="board">
                 <div class="boardPiece" onclick="GameBoard.placeMark(0)"><p class="marker" id="m0"></p></div>
                 <div class="boardPiece" onclick="GameBoard.placeMark(1)"><p class="marker" id="m1"></p></div>
@@ -34,6 +38,10 @@
         <div class="bottom">
             <button class="resetBtn" type="button" onclick="GameBoard.reset()">RESET</button>
         </div>
+    </div>
+
+    <div class="footer">
+        <h2>Made by Isaiah Aquino</h2>
     </div>
 </body>
 </html>
