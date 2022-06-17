@@ -11,25 +11,28 @@
 <body>
     <div class="container">
         <div class="header">
-
+            <div class="playerSelect">
+                <button class="playerBtn" id="playerX" type="button" onclick="DisplayController.togglePlayer(1)">X</button>
+                <button class="playerBtn" id="playerO" type="button" onclick="DisplayController.togglePlayer(2)">O</button>
+            </div>
         </div>
     
         <div class="game">
             <div class="board">
-                <div class="boardPiece"><p class="marker">X</p></div>
-                <div class="boardPiece"><p class="marker">O</p></div>
-                <div class="boardPiece"></div>
-                <div class="boardPiece"></div>
-                <div class="boardPiece"></div>
-                <div class="boardPiece"></div>
-                <div class="boardPiece"></div>
-                <div class="boardPiece"></div>
-                <div class="boardPiece"></div>
+                <div class="boardPiece" onclick="GameBoard.placeMark(0)"><p class="marker" id="m0"></p></div>
+                <div class="boardPiece" onclick="GameBoard.placeMark(1)"><p class="marker" id="m1"></p></div>
+                <div class="boardPiece" onclick="GameBoard.placeMark(2)"><p class="marker" id="m2"></p></div>
+                <div class="boardPiece" onclick="GameBoard.placeMark(3)"><p class="marker" id="m3"></p></div>
+                <div class="boardPiece" onclick="GameBoard.placeMark(4)"><p class="marker" id="m4"></p></div>
+                <div class="boardPiece" onclick="GameBoard.placeMark(5)"><p class="marker" id="m5"></p></div>
+                <div class="boardPiece" onclick="GameBoard.placeMark(6)"><p class="marker" id="m6"></p></div>
+                <div class="boardPiece" onclick="GameBoard.placeMark(7)"><p class="marker" id="m7"></p></div>
+                <div class="boardPiece" onclick="GameBoard.placeMark(8)"><p class="marker" id="m8"></p></div>
             </div>
         </div>
     
         <div class="bottom">
-    
+            <button class="resetBtn" type="button" onclick="GameBoard.reset()">RESET</button>
         </div>
     </div>
 </body>

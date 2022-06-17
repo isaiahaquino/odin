@@ -23,6 +23,27 @@
     background-color: white;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playerSelect {
+    display: flex;
+    gap: 70px;
+}
+
+.playerBtn {
+    font-size: 15px;
+    padding: 2px 50px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.selected {
+    border: 2px solid black;
+    box-shadow: 3px 3px 5px -3px grey;
 }
 
 .game {
@@ -55,12 +76,21 @@
     font-size: 40px;
 }
 
-
-
 .bottom {
     height: 100px;
     width: 100%;
     background-color: white;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resetBtn {
+    font-size: 40px;
+    padding: 10px 30px;
+    border-radius: 15px;
+    background-color: lightskyblue;
+    box-shadow: 5px 5px 10px -5px black;
 }
