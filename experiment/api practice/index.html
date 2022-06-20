@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random gif</title>
+</head>
+<body>
+    <h1></h1>
+    <img src="#">
+    <button type="button" onclick="newGif()">New Gif</button>
+    <form>
+        <input type="text" id="searchinput" placeholder="Search for new Gif">
+        <button type="submit" onclick="searchGif(event)">Search</button>
+    </form>
+    <script>
+        const img = document.querySelector('img');
+        let currentGifTopic = 'cats'
+
+        async function newGif() {
+            const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=7xcAoiuJdlFdHtfJqOG37mZ1xKkULnh5&s=${currentGifTopic}`, { mode: 'cors' });
+            const gifData = await response.json();
+            img.src = gifData.data.images.original.url;
+        }
+
+        async function searchGif(event) {
+            event.preventDefault();
+
+            const input = document.querySelector('#searchinput');
+            currentGifTopic = input.value;
+            console.log("Searching for: " + input.value);
+
+            newGif();
+        }
+
+        newGif();
+    </script>
+</body>
+</html>
