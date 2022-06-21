@@ -10,24 +10,94 @@
 </head>
 <body>
     <div class="main">
-        <form>
-            <input id="searchInput" type="text" placeholder="Enter A City">
-            <button type="submit" onclick="DisplayControl.search(event)">Search</button>
-        </form>
         
         <div class="report">
-            <div class="current">
-
+            <div class="box current">
+                <h1 id="currentTemp">25&#176</h1>
+                <h2 id="currentCity">San Diego</h2>
+                <div id="currentWeatherBox"><img src="photos/Clear.png"></div>
             </div>
     
-            <div class="hourly">
-    
+            <div class="box hourly">
+                <div class="hourlyContainer">
+                    <div class="hourlyReport">
+                        <p class="hourlyTemp">80&#176</p>
+                        <img class="hourlyWeather" src="photos/Rain1.png">
+                        <p class="hourlyTime">15:00</p>
+                    </div>
+                    <div class="hourlyReport">
+                        <p class="hourlyTemp">80&#176</p>
+                        <img class="hourlyWeather" src="photos/Rain1.png">
+                        <p class="hourlyTime">15:00</p>
+                    </div>
+                    <div class="hourlyReport">
+                        <p class="hourlyTemp">80&#176</p>
+                        <img class="hourlyWeather" src="photos/Rain1.png">
+                        <p class="hourlyTime">15:00</p>
+                    </div>
+                    <div class="hourlyReport">
+                        <p class="hourlyTemp">80&#176</p>
+                        <img class="hourlyWeather" src="photos/Rain1.png">
+                        <p class="hourlyTime">15:00</p>
+                    </div>
+                    <div class="hourlyReport">
+                        <p class="hourlyTemp">80&#176</p>
+                        <img class="hourlyWeather" src="photos/Rain1.png">
+                        <p class="hourlyTime">15:00</p>
+                    </div>
+                    <div class="hourlyReport">
+                        <p class="hourlyTemp">80&#176</p>
+                        <img class="hourlyWeather" src="photos/Rain1.png">
+                        <p class="hourlyTime">15:00</p>
+                    </div>
+                    <div class="hourlyReport">
+                        <p class="hourlyTemp">80&#176</p>
+                        <img class="hourlyWeather" src="photos/Rain1.png">
+                        <p class="hourlyTime">15:00</p>
+                    </div>
+                    <div class="hourlyReport">
+                        <p class="hourlyTemp">80&#176</p>
+                        <img class="hourlyWeather" src="photos/Rain1.png">
+                        <p class="hourlyTime">15:00</p>
+                    </div>
+                </div>
             </div>
     
-            <div class="daily">
-    
+            <div class="box daily">
+                <div class="dailyContainer">
+                    <div class="dailyReport">
+                        <p class="dailyTemp">69&#176</p>
+                        <img class="dailyWeather" src="photos/Clouds2.png">
+                        <p class="dailyDay">Mon</p>
+                    </div>
+                    <div class="dailyReport">
+                        <p class="dailyTemp">69&#176</p>
+                        <img class="dailyWeather" src="photos/Clouds2.png">
+                        <p class="dailyDay">Mon</p>
+                    </div>
+                    <div class="dailyReport">
+                        <p class="dailyTemp">69&#176</p>
+                        <img class="dailyWeather" src="photos/Clouds2.png">
+                        <p class="dailyDay">Mon</p>
+                    </div>
+                    <div class="dailyReport">
+                        <p class="dailyTemp">69&#176</p>
+                        <img class="dailyWeather" src="photos/Clouds2.png">
+                        <p class="dailyDay">Mon</p>
+                    </div>
+                    <div class="dailyReport">
+                        <p class="dailyTemp">69&#176</p>
+                        <img class="dailyWeather" src="photos/Clouds2.png">
+                        <p class="dailyDay">Mon</p>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <form>
+            <input id="searchInput" type="text" placeholder="Enter A City">
+            <button type="submit" onclick="DisplayControl.search(event)"><img src="photos/magnify.png"></button>
+        </form>
     </div>
     
 </body>
