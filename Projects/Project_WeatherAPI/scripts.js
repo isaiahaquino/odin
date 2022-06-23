@@ -38,18 +38,6 @@ const WeatherReport = (() => {
                 dayTemps, dayDay, dayWeatherConditions, daysToShow, hoursToShow }
     }
 
-    const reset = () => {
-        currentCity = null;         
-        currentTemp = null;               
-        currentWeatherCondition = null;     
-        hourTemps = [];                 
-        hourWeatherConditions = [];         
-        hourTimes = [];                   
-        dayTemps = [];                
-        dayWeatherConditions = [];    
-        dayDay = []; 
-    }
-
     const parseResponseCurr = (response) => {
         currentCity = response.name;
         currentTemp = Math.round(response.main.temp);
@@ -83,6 +71,7 @@ const WeatherReport = (() => {
             .then(response => {
                 parseResponseCurr(response);
                 DisplayControl.displayReport();
+                console.log(response);
             })
             .catch(error => {
                 console.log("Error: " + error);
@@ -96,6 +85,7 @@ const WeatherReport = (() => {
             .then(response => {
                 parseResponseDays(response);
                 DisplayControl.displayReport();
+                console.log(response);
             })
             .catch(error => {
                 console.log("Error: " + error);
