@@ -10,24 +10,24 @@ const exampleCV = {
     },
 
     education: [
-        {
-            name: '',
-            city: '',
-            degree: '',
-            subject: '',
-            start: '',
-            end: '',
-        },
+        // {
+        //     name: '',
+        //     city: '',
+        //     degree: '',
+        //     subject: '',
+        //     start: '',
+        //     end: '',
+        // },
     ],
 
     experience: [
-        {
-            position: '',
-            company: '',
-            city: '',
-            start: '',
-            end: '',
-        },
+        // {
+        //     position: '',
+        //     company: '',
+        //     city: '',
+        //     start: '',
+        //     end: '',
+        // },
     ]
 
 }

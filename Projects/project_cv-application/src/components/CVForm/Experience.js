@@ -1,15 +1,23 @@
 import React, { Component } from "react";
 
 class Experience extends Component {
+    
     render() {
+        const { cvFormExp, removeExperienceForm } = this.props;
+
         return (
-            <div className="form">
-                <input type="text" placeholder="Position"></input>
-                <input type="text" placeholder="Company"></input>
-                <input type="text" placeholder="City"></input>
-                <input type="text" placeholder="From"></input>
-                <input type="text" placeholder="To"></input>
-            </div>
+            <>
+                {cvFormExp.map((exp) => {
+                    const id = exp.id.toString();
+                    console.log(id)
+                    return (
+                        <div key={id}>
+                            {exp.form}
+                            <button type="button" key={id} onClick={removeExperienceForm}>Delete</button>
+                        </div>
+                    )
+                })}
+            </>
         )
     }
 }

@@ -28,6 +28,11 @@ header h1 {
     flex-direction: column;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 footer {
     position: absolute;
     bottom: 0;
