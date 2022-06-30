@@ -17,6 +17,7 @@ class CVForm extends Component {
                     />
                     <label>Experience</label>
                     <Experience />
+                    <button type="button">Add</button>
                     <label>Education</label>
                     <Education />
                 </form>

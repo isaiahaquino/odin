@@ -10,6 +10,7 @@ class Education extends Component {
                 <input type="text" placeholder="Subject"></input>
                 <input type="text" placeholder="From"></input>
                 <input type="text" placeholder="To"></input>
+                <button type="button">Delete</button>
             </div>
         )
     }
