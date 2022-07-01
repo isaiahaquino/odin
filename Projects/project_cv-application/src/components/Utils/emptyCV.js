@@ -9,27 +9,9 @@ const emptyCV =  {
         description: '',
     },
 
-    education: [
-        {
-            name: '',
-            city: '',
-            degree: '',
-            subject: '',
-            start: '',
-            end: '',
-        },
-    ],
+    education: [],
 
-    experience: [
-        {
-            position: '',
-            company: '',
-            city: '',
-            start: '',
-            end: '',
-        },
-    ]
-
+    experience: [],
 }
 
 export default emptyCV;

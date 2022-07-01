@@ -10,7 +10,7 @@ class App extends Component {
       <div className="appContainer">
         <Header />
         <Main />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

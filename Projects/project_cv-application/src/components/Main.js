@@ -4,8 +4,9 @@ import CVPreview from './CVPreview/CVPreview';
 import EmptyCV from './Utils/EmptyCV';
 import ExampleCV from './Utils/ExampleCV';
 import EmptyExp from './Utils/EmptyExp';
-import emptyCV from './Utils/EmptyCV';
+import EmptyEdu from './Utils/EmptyEdu';
 import ExperienceForm from './CVForm/ExperienceForm';
+import EducationForm from './CVForm/EducationForm';
 import uniqid from 'uniqid';
 
 class Main extends Component {
@@ -14,10 +15,6 @@ class Main extends Component {
 
         this.state = {
             cv: EmptyCV,
-            eduForm: {
-                form: ExperienceForm,
-                id: uniqid(),
-            },
             cvFormEdu: [],
             cvFormExp: [],
         }
@@ -26,7 +23,9 @@ class Main extends Component {
         this.handleChangeEducation = this.handleChangeEducation.bind(this);
         this.handleChangeExperience = this.handleChangeExperience.bind(this);
         this.addExperienceForm = this.addExperienceForm.bind(this);
+        this.addEducationForm = this.addEducationForm.bind(this);
         this.removeExperienceForm = this.removeExperienceForm.bind(this);
+        this.removeEducationForm = this.removeEducationForm.bind(this);
     }
 
     loadExample() {
@@ -57,20 +56,20 @@ class Main extends Component {
     }
 
     addExperienceForm() {
+        const expForm =  { form: ExperienceForm, id: uniqid(), };
+        let newCV = this.state.cv;
+        let newExp = EmptyExp;
+        newExp.id = expForm.id;
+        newCV.experience.push(newExp);
         this.setState({
-            cvFormExp: this.state.cvFormExp.concat(this.state.eduForm),
-            eduForm: {
-                form: ExperienceForm,
-                id: uniqid(),
-            },
+            cvFormExp: this.state.cvFormExp.concat(expForm),
+            cv: newCV,
         })
     }
 
     removeExperienceForm(e) {
-        let newForm = this.state.cvFormExp;
-        newForm = newForm.filter(exp => exp.id != e.target.id)
         this.setState({
-            cvFormExp: newForm,
+            cvFormExp: this.state.cvFormExp.filter(exp => exp.id !== e.target.id),
         })
     }
 
@@ -78,6 +77,24 @@ class Main extends Component {
         // TODO
 
 
+    }
+
+    addEducationForm() {
+        const eduForm = { form: EducationForm, id: uniqid() };
+        let newCV = this.state.cv;
+        let newExp = EmptyEdu;
+        newExp.id = eduForm.id;
+        newCV.education.push(newExp);
+        this.setState({
+            cvFormEdu: this.state.cvFormEdu.concat(eduForm),
+            cv: newCV,
+        })
+    }
+
+    removeEducationForm(e) {
+        this.setState({
+            cvFormEdu: this.state.cvFormEdu.filter(exp => exp.id !== e.target.id),
+        })
     }
 
 
@@ -93,7 +110,9 @@ class Main extends Component {
                     cvFormExp={cvFormExp}
                     handleChangePersonal={this.handleChangePersonal}
                     addExperienceForm={this.addExperienceForm}
+                    addEducationForm={this.addEducationForm}
                     removeExperienceForm={this.removeExperienceForm}
+                    removeEducationForm={this.removeEducationForm}
                     loadExample={this.loadExample}
                     loadReset={this.loadReset}
                 />

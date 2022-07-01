@@ -1,10 +1,13 @@
 const EmptyExp = {
-    name: '',
-    city: '',
-    degree: '',
-    subject: '',
-    start: '',
-    end: '',
+    form: {
+        name: '',
+        city: '',
+        degree: '',
+        subject: '',
+        start: '',
+        end: '',
+    },
+    id: '',
 }
 
 export default EmptyExp;

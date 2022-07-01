@@ -2,16 +2,19 @@ import React, { Component} from "react";
 
 class Education extends Component {
     render() {
+        const { cvFormEdu, removeEducationForm } = this.props;
+
         return (
-            <div className="form">
-                <input type="text" placeholder="University name"></input>
-                <input type="text" placeholder="City"></input>
-                <input type="text" placeholder="Degree"></input>
-                <input type="text" placeholder="Subject"></input>
-                <input type="text" placeholder="From"></input>
-                <input type="text" placeholder="To"></input>
-                <button type="button">Delete</button>
-            </div>
+            <>
+                {cvFormEdu.map((exp) => {
+                    return (
+                        <div key={exp.id} id={exp.id}>
+                            {exp.form}
+                            <button type="button" id={exp.id} onClick={removeEducationForm}>Delete</button>
+                        </div>
+                    )
+                })}
+            </>
         )
     }
 }

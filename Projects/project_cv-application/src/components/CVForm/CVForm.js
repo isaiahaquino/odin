@@ -5,7 +5,18 @@ import Education from './Education'
 
 class CVForm extends Component {
     render() {
-        const { cv, cvFormExp, loadExample, loadReset, handleChangePersonal, addExperienceForm, removeExperienceForm } = this.props;
+        const { 
+            cv, 
+            cvFormExp, 
+            cvFormEdu,
+            loadExample, 
+            loadReset, 
+            handleChangePersonal, 
+            addExperienceForm, 
+            addEducationForm,
+            removeExperienceForm,
+            removeEducationForm,
+        } = this.props;
 
         return (
             <div>
@@ -24,8 +35,11 @@ class CVForm extends Component {
                     <button type="button" onClick={addExperienceForm}>Add</button>
 
                     <label>Education</label>
-                    {/* <Education /> */}
-                    <button type="button">Add</button>
+                    <Education 
+                        cvFormEdu={cvFormEdu}
+                        removeEducationForm={removeEducationForm}
+                    />
+                    <button type="button" onClick={addEducationForm}>Add</button>
                 </form>
 
                 <button type="button" onClick={loadExample}>Load Example</button>
