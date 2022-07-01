@@ -14,6 +14,10 @@ class Main extends Component {
 
         this.state = {
             cv: EmptyCV,
+            eduForm: {
+                form: ExperienceForm,
+                id: uniqid(),
+            },
             cvFormEdu: [],
             cvFormExp: [],
         }
@@ -53,26 +57,21 @@ class Main extends Component {
     }
 
     addExperienceForm() {
-        let newForm = this.state.cvFormExp;
-        let newExp = {
-            form: ExperienceForm,
-            id: uniqid(),
-        }
-        newForm = newForm.concat(newExp);
         this.setState({
-            cvFormExp: newForm,
+            cvFormExp: this.state.cvFormExp.concat(this.state.eduForm),
+            eduForm: {
+                form: ExperienceForm,
+                id: uniqid(),
+            },
         })
     }
 
     removeExperienceForm(e) {
         let newForm = this.state.cvFormExp;
-        console.log(newForm)
-        console.log(`Deleting: ${e.target.key}`)
-        newForm = newForm.filter(exp => exp.id != e.target.key)
+        newForm = newForm.filter(exp => exp.id != e.target.id)
         this.setState({
             cvFormExp: newForm,
         })
-        console.log(newForm)
     }
 
     handleChangeEducation() {

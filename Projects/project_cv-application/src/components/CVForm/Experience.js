@@ -8,12 +8,10 @@ class Experience extends Component {
         return (
             <>
                 {cvFormExp.map((exp) => {
-                    const id = exp.id.toString();
-                    console.log(id)
                     return (
-                        <div key={id}>
+                        <div key={exp.id} id={exp.id}>
                             {exp.form}
-                            <button type="button" key={id} onClick={removeExperienceForm}>Delete</button>
+                            <button type="button" id={exp.id} onClick={removeExperienceForm}>Delete</button>
                         </div>
                     )
                 })}
