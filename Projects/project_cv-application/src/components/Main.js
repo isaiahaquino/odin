@@ -53,7 +53,10 @@ class Main extends Component {
 
     handleChangeExperience(e) {
         // TODO
-        
+        let newCV = this.state.cv;
+        const education = newCV.education.map((edu) => {
+            
+        })
     }
 
     addExperienceForm() {
@@ -76,7 +79,6 @@ class Main extends Component {
 
     handleChangeEducation() {
         // TODO
-
 
     }
 
