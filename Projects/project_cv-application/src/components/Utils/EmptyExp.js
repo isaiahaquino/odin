@@ -1,9 +1,8 @@
 const EmptyExp = {
     form: {
-        name: '',
+        position: '',
+        company: '',
         city: '',
-        degree: '',
-        subject: '',
         start: '',
         end: '',
     },

@@ -1,8 +1,9 @@
 const EmptyEdu = {
     form: {
-        position: '',
-        company: '',
+        name: '',
         city: '',
+        degree: '',
+        subject: '',
         start: '',
         end: '',
     },

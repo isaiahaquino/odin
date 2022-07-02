@@ -1,11 +1,11 @@
 const eduForm = (
     <div className="form">
-        <input type="text" placeholder="University name"></input>
-        <input type="text" placeholder="City"></input>
-        <input type="text" placeholder="Degree"></input>
-        <input type="text" placeholder="Subject"></input>
-        <input type="text" placeholder="From"></input>
-        <input type="text" placeholder="To"></input>
+        <input type="text" name="name" placeholder="University name"></input>
+        <input type="text" name="city" placeholder="City"></input>
+        <input type="text" name="degree" placeholder="Degree"></input>
+        <input type="text" name="subject" placeholder="Subject"></input>
+        <input type="text" name="start" placeholder="From"></input>
+        <input type="text" name="end" placeholder="To"></input>
     </div>
 )
 

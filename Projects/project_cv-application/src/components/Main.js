@@ -51,8 +51,9 @@ class Main extends Component {
         })
     }
 
-    handleChangeExperience() {
+    handleChangeExperience(e) {
         // TODO
+        
     }
 
     addExperienceForm() {
