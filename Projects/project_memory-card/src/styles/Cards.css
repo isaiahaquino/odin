@@ -1,0 +1,28 @@
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: whitesmoke;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 125px;
+  gap: 10px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 5px lightgray;
+}
+
+.card img {
+  height: 100px;
+  width: 100px;
+}
+
+.card h1 {
+  font-size: 1rem;
+}
