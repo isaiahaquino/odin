@@ -5,7 +5,7 @@ import Score from './Score';
 
 function Main() {
 
-  const defaultArray = cardsArray;
+  const defaultArray = JSON.parse(JSON.stringify(cardsArray));
 
   const [cards, setCards] = useState(defaultArray);
   const [currentScore, setCurrentScore] = useState(0);
@@ -13,11 +13,11 @@ function Main() {
 
   const handleClick = (e) => {
     const newCards = cards;
-    console.log(e.target.id)
+    const card = newCards.filter((card) => card.id == e.target.id)[0].selected;
+    const index = newCards.findIndex((card) => card.id == e.target.id);
 
-    // FIX HERE
-    if (!newCards[e.target.id].selected) {
-      newCards[e.target.id].selected = true;
+    if (!card) {
+      newCards[index].selected = true;
       shuffleCards(newCards);
       handleScore(1);
     } else {
@@ -47,12 +47,11 @@ function Main() {
       array[j] = temp;
     }
     setCards(array);
-    console.log(cards);
   }
 
   const resetGame = () => {
     console.log('You lose!\nGame is resetting...');
-    const newArray = cardsArray;
+    const newArray = JSON.parse(JSON.stringify(cardsArray));
     shuffleCards(newArray);
   };
 
