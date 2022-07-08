@@ -42,10 +42,13 @@
 }
 
 .subscribe, .social {
-  width: 20vw;
   display: flex;
   flex-direction: column;
   gap: .5rem;
+}
+
+.subscribe {
+  width: 25vw;
 }
 
 .subscribe input {
@@ -54,6 +57,10 @@
   color: white;
   border: none;
   border-bottom: solid 2px grey;
+}
+
+.social {
+  width: 15vw;
 }
 
 .social div {

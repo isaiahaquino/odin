@@ -5,9 +5,14 @@ import Footer from '../components/Footer';
 function HomePage(props) {
   return (
     <div className='homePage'>
+
       <Header 
       cartItems={props.cartItems}
       />
+      
+      <div className='homeMain'>
+
+      </div>
 
       <Footer />
     </div>
