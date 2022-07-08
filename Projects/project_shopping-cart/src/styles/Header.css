@@ -1,0 +1,70 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px lightgrey;
+}
+
+header h1 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  border-right: solid 1px lightgray;
+  padding: .75rem 4rem;
+}
+
+.searchBar {
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+img {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+input {
+  font-size: 1rem;
+  padding: 5px 0px 5px 10px;
+  width: 25vw;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+header nav, .searchBar, header nav div {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  border-left: solid 1px lightgrey;
+  padding: .8rem 30px;
+}
+
+.about, .shop {
+  border-left: solid 1px lightgrey;
+  padding: 1rem 30px;
+}
+
+.cart {
+  gap: 5px;
+  position: relative;
+}
+
+.cart p {
+  position: absolute;
+  font-size: .75rem;
+  left: 40px;
+  top: 7px;
+  background-color: rgb(254, 122, 122);
+  color: white;
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+
+a {
+  font-size: 1rem;
+  text-decoration: none;
+}
