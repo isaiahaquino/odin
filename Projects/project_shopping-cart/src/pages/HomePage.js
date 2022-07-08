@@ -1,8 +1,16 @@
+import '../styles/HomePage.css';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-function HomePage() {
+function HomePage(props) {
   return (
-    <Header />
+    <div className='homePage'>
+      <Header 
+      cartItems={props.cartItems}
+      />
+
+      <Footer />
+    </div>
   )
 }
 

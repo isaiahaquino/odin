@@ -3,7 +3,6 @@ import search from '../photos/icons/magnify.png';
 import cart from '../photos/icons/cart-outline.png';
 
 function Header(props) {
-  const cartItems = 3;
 
   return (
     <header>
@@ -21,10 +20,9 @@ function Header(props) {
         </div>
         <div className='nav cart'>
           <img src={cart} alt=''></img>
-          <p>{cartItems}</p>
+          <p>{props.cartItems}</p>
           <a href='../pages/CartPage.js'>Cart</a>
         </div>
-
       </nav>
     </header>
   );
