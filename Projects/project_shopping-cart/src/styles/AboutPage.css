@@ -1,0 +1,12 @@
+.aboutPage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.aboutPage h1 {
+  margin-top: 10rem;
+  font-size: 2rem;
+}

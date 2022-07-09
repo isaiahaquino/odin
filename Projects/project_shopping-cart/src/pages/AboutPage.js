@@ -1,6 +1,8 @@
+import '../styles/AboutPage.css';
+
 function AboutPage() {
   return (
-    <div>
+    <div className='aboutPage'>
       <h1>About Page</h1>
     </div>
   );
