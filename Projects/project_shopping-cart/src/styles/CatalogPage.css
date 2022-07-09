@@ -1,0 +1,37 @@
+.catalogPage {
+  min-height: 100vh;
+  display: flex;
+}
+
+.catalogNav {
+  display: flex;
+  flex-direction: column;
+  width: 13rem;
+  /* border-right: solid 1px lightgrey; */
+  padding: 3rem 0 0 4rem;
+}
+
+.catalogNav h1 {
+  font-size: 1.5rem;
+}
+
+.listMain {
+  margin-top: 1rem;
+}
+
+.listMain>li {
+  margin-top: .5rem;
+  font-size: 1rem;
+}
+
+.listSub>li {
+  margin: .5rem 0 0 1rem;
+}
+
+.catalogLink {
+  font-size: .75rem;
+}
+
+.catalogMain {
+  /* box-shadow: inset 15px 0px 10px -10px whitesmoke; */
+}

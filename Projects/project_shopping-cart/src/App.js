@@ -29,7 +29,7 @@ function App() {
           <Route exact path='/about' element={
             <AboutPage />
           }/>
-          <Route exact path='/catalog' element={
+          <Route exact path='/catalog/*' element={
             <CatalogPage />
           }/>
           <Route exact path='/cart' element={
