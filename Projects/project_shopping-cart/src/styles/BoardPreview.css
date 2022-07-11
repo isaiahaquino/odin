@@ -6,7 +6,7 @@
 }
 
 .boardContainer {
-  box-shadow: 0px 5px 5px 5px lightgray;
+  box-shadow: 0px 5px 5px 5px whitesmoke;
   display: flex;
   flex-direction: column;
   justify-content: center;

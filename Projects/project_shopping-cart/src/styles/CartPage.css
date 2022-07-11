@@ -1,0 +1,83 @@
+.cartPage {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.cartPage>h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgb(84, 84, 84);
+}
+
+.shopCart {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartHeader {
+  display: flex;
+  padding-bottom: 1rem;
+  justify-content: space-between;
+  border-bottom: solid 2px lightgrey;
+}
+
+.cartHeader h2:first-child {
+  width: 17rem;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: solid 1px lightgray;
+}
+
+.itemDesc {
+  display: flex;
+  align-items: center;
+  width: 17rem;
+}
+
+.itemDesc img {
+  height: 70px;
+  width: 50px;
+}
+
+.itemRemove {
+  display: flex;
+  align-content: center;
+}
+
+.itemRemove button {
+  border-radius: 10px;
+  border: none;
+  font-size: .7rem;
+  margin-left: .5rem;
+}
+
+.itemRemove button:hover {
+  background-color: lightgrey;
+}
+
+.cartTotal {
+  align-self: flex-end;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartTotal>div {
+  display: flex;
+  justify-content: space-between;
+  width: 30rem;
+  border-bottom: solid 1px lightgray;
+  padding: 1rem 0;
+}
+
+.cartTotal button {
+  margin-top: 1rem;
+  align-self: flex-end;
+}

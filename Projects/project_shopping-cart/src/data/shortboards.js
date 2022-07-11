@@ -17,7 +17,7 @@ const shortboards = [
     name: 'Pyzel Shadow',
     img: 'pyzel_shadow.jpeg',
     price: '795',
-    description: '',
+    description: 'High Performance',
     id: '002',
   },
   {

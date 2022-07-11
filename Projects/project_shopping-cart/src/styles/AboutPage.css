@@ -9,4 +9,11 @@
 .aboutPage h1 {
   margin-top: 10rem;
   font-size: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px lightgray ;
+}
+
+.aboutPage p {
+  margin-top: 2rem;
+  text-align: center;
 }

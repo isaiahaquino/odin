@@ -6,7 +6,6 @@
 }
 
 .homeMain {
-  min-height: 100vh;
   width: 100vw;
   position: relative;
 }
@@ -17,22 +16,16 @@
 }
 
 .featured {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
 } 
 
 .featured>h1 {
   font-size: 2rem;
   margin-top: 3rem;
   font-weight: 500;
-}
-
-.featuredContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .homeMain div {

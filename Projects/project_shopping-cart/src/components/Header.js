@@ -21,7 +21,7 @@ function Header(props) {
         </div>
         <div className='nav cart'>
           <img src={cart} alt=''></img>
-          <p>{props.cartItems}</p>
+          <p>{props.cartItemCount}</p>
           <Link to='/cart'>Cart</Link>
         </div>
       </nav>

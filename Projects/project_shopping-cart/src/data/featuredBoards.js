@@ -4,13 +4,15 @@ const featuredBoards = [
     img: 'pyzel_ghost.jpeg',
     price: '825',
     description: 'High Performance',
+    quantity: '1',
     id: '000',
   },
   {
     name: 'Pyzel Shadow',
     img: 'pyzel_shadow.jpeg',
     price: '795',
-    description: '',
+    description: 'High Performance',
+    quantity: '2',
     id: '002',
   },
   {
@@ -18,6 +20,7 @@ const featuredBoards = [
     img: 'pyzel_phantom.png',
     price: '795',
     description: 'Daily Driver',
+    quantity: '1',
     id: '004',
   },
 ]

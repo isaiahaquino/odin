@@ -7,23 +7,24 @@ import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
 import CatalogPage from './pages/CatalogPage';
 import CartPage from './pages/CartPage';
+import featured from './data/featuredBoards';
 
 function App() {
 
-  const [cartItems, setCartItems] = useState(0);
+  const [cartItemCount, setCartItemCount] = useState(0);
 
   return (
     <Router>
       <div>
 
         <Header 
-        cartItems={cartItems}
+        cartItemCount={cartItemCount}
         />
 
         <Routes>
           <Route exact path='/' element={
             <HomePage
-            cartItems={cartItems}
+            cartItems={cartItemCount}
             />
           }/> 
           <Route exact path='/about' element={
@@ -33,7 +34,10 @@ function App() {
             <CatalogPage />
           }/>
           <Route exact path='/cart' element={
-            <CartPage />
+            <CartPage 
+            cartItemCount={cartItemCount}
+            cartItems={featured}
+            />
           }/>
         </Routes>
 
