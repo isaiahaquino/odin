@@ -23,7 +23,7 @@
   align-items: center;
 } 
 
-.featured h1 {
+.featured>h1 {
   font-size: 2rem;
   margin-top: 3rem;
   font-weight: 500;

@@ -9,7 +9,7 @@ function CatalogPage() {
         <h1>Catalog</h1>
         <ul className='listMain'>
           <li>
-            Surfboards
+            <Link to='surfboards'>Surfboards</Link>
             <ul className='listSub'>
               <li><Link className='catalogLink' style={{textDecoration:'none'}} to='surfboards/shortboards'>Shortboards</Link></li>
               <li><Link className='catalogLink' style={{textDecoration:'none'}} to='surfboards/funboards'>Funboards</Link></li>
@@ -20,19 +20,24 @@ function CatalogPage() {
       </div>
 
       <Routes>
+        <Route path='surfboards' element={
+          <CatalogMain
+            category={'surfboards'}
+          />
+        }/>
         <Route path='surfboards/shortboards' element={
           <CatalogMain 
-            category={'shortboards'}
+            category={'surfboards / shortboards'}
           />
         }/>
         <Route path='surfboards/funboards' element={
           <CatalogMain 
-            category={'funboards'}
+            category={'surfboards / funboards'}
           />
         }/>
         <Route path='surfboards/longboards' element={
           <CatalogMain 
-            category={'longboards'}
+            category={'surfboards / longboards'}
           />
         }/>
       </Routes>

@@ -17,7 +17,7 @@ function Header(props) {
           <Link to='/about'>About</Link>
         </div>
         <div className='nav shop'>
-          <Link to='/catalog'>Shop</Link>
+          <Link to='/catalog/surfboards'>Shop</Link>
         </div>
         <div className='nav cart'>
           <img src={cart} alt=''></img>

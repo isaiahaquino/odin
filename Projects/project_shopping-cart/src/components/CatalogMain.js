@@ -7,15 +7,22 @@ function CatalogMain(props) {
 
   let boards = [];
 
-  if (props.category === 'shortboards') {
+  if (props.category === 'surfboards') {
+    shortboards.forEach((board) => {
+      boards.push(board);
+    });
+    funboards.forEach((board) => {
+      boards.push(board);
+    });
+  } else if (props.category === 'surfboards / shortboards') {
     boards = shortboards;
-  } else if (props.category === 'funboards') {
+  } else if (props.category === 'surfboards / funboards') {
     boards = funboards;
   }
 
   return (
     <div className='catalogMain'>
-      <h1>home / surfboards / {props.category}</h1>
+      <h1>home / {props.category}</h1>
       <BoardPreview 
         boards={boards}
       />
