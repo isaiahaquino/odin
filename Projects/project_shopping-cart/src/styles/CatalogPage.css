@@ -6,13 +6,14 @@
 .catalogNav {
   display: flex;
   flex-direction: column;
-  width: 13rem;
+  width: 11rem;
   /* border-right: solid 1px lightgrey; */
   padding: 3rem 0 0 4rem;
 }
 
 .catalogNav h1 {
   font-size: 1.5rem;
+  width: 11rem;
 }
 
 .listMain {
@@ -30,8 +31,4 @@
 
 .catalogLink {
   font-size: .75rem;
-}
-
-.catalogMain {
-  /* box-shadow: inset 15px 0px 10px -10px whitesmoke; */
 }

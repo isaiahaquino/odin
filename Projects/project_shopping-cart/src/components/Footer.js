@@ -8,7 +8,7 @@ function Footer() {
     <div className='footer'>
       <div className='main'>
         <div className='logo'>
-          <h1>ShopName</h1>
+          <h1>FakeSurf</h1>
         </div>
         <div className='links'>
           <p>Shop</p>

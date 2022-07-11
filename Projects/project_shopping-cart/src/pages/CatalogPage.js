@@ -1,5 +1,5 @@
 import '../styles/CatalogPage.css';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router-dom';
 import CatalogMain from '../components/CatalogMain';
 
 function CatalogPage() {
@@ -19,25 +19,23 @@ function CatalogPage() {
         </ul>
       </div>
 
-      <div className='catalogMain'>
-        <Routes>
-          <Route path='surfboards/shortboards' element={
-            <CatalogMain 
-              category={'shortboards'}
-            />
-          }/>
-          <Route path='surfboards/funboards' element={
-            <CatalogMain 
-              category={'funboards'}
-            />
-          }/>
-          <Route path='surfboards/longboards' element={
-            <CatalogMain 
-              category={'longboards'}
-            />
-          }/>
-        </Routes>
-      </div>
+      <Routes>
+        <Route path='surfboards/shortboards' element={
+          <CatalogMain 
+            category={'shortboards'}
+          />
+        }/>
+        <Route path='surfboards/funboards' element={
+          <CatalogMain 
+            category={'funboards'}
+          />
+        }/>
+        <Route path='surfboards/longboards' element={
+          <CatalogMain 
+            category={'longboards'}
+          />
+        }/>
+      </Routes>
     </div>
   );
 }

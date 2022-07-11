@@ -7,7 +7,7 @@ function Header(props) {
 
   return (
     <header>
-      <Link to='/'>ShopName</Link>
+      <Link to='/'>FakeSurf</Link>
       <div className='searchBar'>
         <img src={search} alt=''></img>
         <input type='text' placeholder='Search...'></input>
