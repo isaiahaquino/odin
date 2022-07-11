@@ -1,4 +1,3 @@
-import BoardPreview from '../components/BoardPreview';
 import '../styles/CartPage.css';
 
 function CartPage(props) {
@@ -6,6 +5,7 @@ function CartPage(props) {
   let subtotal = 0;
   let tax = 0;
   let total = 0;
+  const taxPercent = 0.08;
 
   return (
     <div className='cartPage'>
@@ -16,8 +16,13 @@ function CartPage(props) {
         </div>
         <div className='cartItems'>
           {props.cartItems.map((item) => {
+            subtotal += parseInt(item.price);
+            tax = subtotal * taxPercent; 
+            tax = tax.toFixed(2);
+            total = subtotal + tax;
+
             return (
-              <div className='cartItem'>
+              <div className='cartItem' key={item.id}>
                 <div className='itemDesc'>
                   <img src={require(`../photos/images/${item.img}`)} alt=''></img>
                   <div>
@@ -29,7 +34,7 @@ function CartPage(props) {
                 <h3>{item.quantity}</h3>
                 <div className='itemRemove'>
                   <h3>${item.price * item.quantity}</h3>
-                  <button type='button'>X</button>
+                  <button type='button' id={item.id} onClick={props.removeItemFromCart}>X</button>
                 </div>
               </div>
             );
@@ -41,7 +46,7 @@ function CartPage(props) {
             <h2>${subtotal}</h2>
           </div>
           <div className='tax'>
-            <h1>Tax:</h1>
+            <h1>Tax(8%):</h1>
             <h2>${tax}</h2>
           </div>
           <div className='total'>

@@ -7,11 +7,34 @@ import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
 import CatalogPage from './pages/CatalogPage';
 import CartPage from './pages/CartPage';
-import featured from './data/featuredBoards';
+import uniqid from 'uniqid';
+import shortboards from './data/shortboards';
+import funboards from './data/funboards';
 
 function App() {
 
   const [cartItemCount, setCartItemCount] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
+  const boards = shortboards.concat(funboards);
+
+  function addItemToCart(e) {
+    let newItems = cartItems;
+    let newItem = boards.filter(board => board.id === e.target.id)[0];
+    newItem = JSON.parse(JSON.stringify(newItem));
+    newItem.id = cartItemCount;
+    newItems.push(newItem);
+    setCartItems(newItems);
+
+    setCartItemCount(cartItemCount + 1);
+  }
+
+  function removeItemFromCart(e) {
+    const newItems = cartItems.filter(item => !(item.id === parseInt(e.target.id)));
+    setCartItems(newItems);
+
+    setCartItemCount(cartItemCount - 1);
+  }
+
 
   return (
     <Router>
@@ -25,18 +48,22 @@ function App() {
           <Route exact path='/' element={
             <HomePage
             cartItems={cartItemCount}
+            addItemToCart={addItemToCart}
             />
           }/> 
           <Route exact path='/about' element={
             <AboutPage />
           }/>
           <Route exact path='/catalog/*' element={
-            <CatalogPage />
+            <CatalogPage 
+              addItemToCart={addItemToCart}
+            />
           }/>
           <Route exact path='/cart' element={
             <CartPage 
             cartItemCount={cartItemCount}
-            cartItems={featured}
+            cartItems={cartItems}
+            removeItemFromCart={removeItemFromCart}
             />
           }/>
         </Routes>

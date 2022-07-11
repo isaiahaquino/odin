@@ -4,6 +4,7 @@ const funboards = [
     img: 'pyzel_gremlin.png',
     price: '825',
     description: 'Funformance',
+    quantity: '1',
     id: '010',
   },
   {
@@ -11,6 +12,7 @@ const funboards = [
     img: 'pyzel_wildcat.png',
     price: '895',
     description: 'Funformance',
+    quantity: '1',
     id: '011',
   },
   {
@@ -18,6 +20,7 @@ const funboards = [
     img: 'pyzel_astro.png',
     price: '825',
     description: 'Funformance',
+    quantity: '1',
     id: '012',
   },
 ];

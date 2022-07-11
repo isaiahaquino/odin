@@ -2,7 +2,7 @@ import '../styles/CatalogPage.css';
 import { Route, Routes, Link } from 'react-router-dom';
 import CatalogMain from '../components/CatalogMain';
 
-function CatalogPage() {
+function CatalogPage(props) {
   return (
     <div className='catalogPage'>
       <div className='catalogNav'>
@@ -23,21 +23,25 @@ function CatalogPage() {
         <Route path='surfboards' element={
           <CatalogMain
             category={'surfboards'}
+            addItemToCart={props.addItemToCart}
           />
         }/>
         <Route path='surfboards/shortboards' element={
           <CatalogMain 
             category={'surfboards / shortboards'}
+            addItemToCart={props.addItemToCart}
           />
         }/>
         <Route path='surfboards/funboards' element={
           <CatalogMain 
             category={'surfboards / funboards'}
+            addItemToCart={props.addItemToCart}
           />
         }/>
         <Route path='surfboards/longboards' element={
           <CatalogMain 
             category={'surfboards / longboards'}
+            addItemToCart={props.addItemToCart}
           />
         }/>
       </Routes>

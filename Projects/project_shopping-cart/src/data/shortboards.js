@@ -4,6 +4,7 @@ const shortboards = [
     img: 'pyzel_ghost.jpeg',
     price: '825',
     description: 'High Performance',
+    quantity: '1',
     id: '000',
   },
   {
@@ -11,6 +12,7 @@ const shortboards = [
     img: 'pyzel_highline.png',
     price: '795',
     description: 'High Performance',
+    quantity: '1',
     id: '001',
   },
   {
@@ -18,6 +20,7 @@ const shortboards = [
     img: 'pyzel_shadow.jpeg',
     price: '795',
     description: 'High Performance',
+    quantity: '1',
     id: '002',
   },
   {
@@ -25,6 +28,7 @@ const shortboards = [
     img: 'pyzel_mini-ghost-squash.png',
     price: '825',
     description: 'Daily Driver',
+    quantity: '1',
     id: '003',
   },
   {
@@ -32,6 +36,7 @@ const shortboards = [
     img: 'pyzel_phantom.png',
     price: '795',
     description: 'Daily Driver',
+    quantity: '1',
     id: '004',
   },
   {
@@ -39,6 +44,7 @@ const shortboards = [
     img: 'pyzel_pyzalien-2.png',
     price: '825',
     description: 'Daily Driver',
+    quantity: '1',
     id: '005',
   },
 ]

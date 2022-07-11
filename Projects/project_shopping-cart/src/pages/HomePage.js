@@ -19,6 +19,7 @@ function HomePage(props) {
         <h1>FEATURED PRODUCTS</h1>
         <BoardPreview
           boards={featuredBoards}
+          addItemToCart={props.addItemToCart}
         />
       </div>
     </div>

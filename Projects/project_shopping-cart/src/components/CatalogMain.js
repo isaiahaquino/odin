@@ -25,6 +25,7 @@ function CatalogMain(props) {
       <h1>home / {props.category}</h1>
       <BoardPreview 
         boards={boards}
+        addItemToCart={props.addItemToCart}
       />
     </div>
   );

@@ -12,7 +12,7 @@ const featuredBoards = [
     img: 'pyzel_shadow.jpeg',
     price: '795',
     description: 'High Performance',
-    quantity: '2',
+    quantity: '1',
     id: '002',
   },
   {
