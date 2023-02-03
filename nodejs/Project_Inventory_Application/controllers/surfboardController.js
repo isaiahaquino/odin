@@ -1,7 +1,7 @@
 const Surfboard = require('../models/surfboard')
 
 exports.index = (req, res, next) => {
-  res.sent('NOT IMPLEMENTED: Site home page')
+  res.send('NOT IMPLEMENTED: Site home page')
 }
 
 exports.surfboard_list = (req, res, next) => {
